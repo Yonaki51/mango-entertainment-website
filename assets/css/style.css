@@ -1,9 +1,60 @@
-/* Very basic starter CSS */
+/* Mango Entertainment Theme */
+
+/* Mango color palette */
+:root {
+	--mango-golden: #db9d00;
+	--mango-sky: #99d9ea;
+	--mango-blue: #2744c4;
+	--mango-navy: #142987;
+	--mango-dark-green: #3d5440;
+	--mango-green: #4a694e;
+	--mango-yellow: #faaf00;
+	--mango-red: #ff0000;
+	--mango-coral: #fa4343;
+}
 
 body {
 	margin: 0;
-	font-family: Arial, sans-serif;
-	line-height: 1.5;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	line-height: 1.6;
+	min-height: 100vh;
+	position: relative;
+	overflow-x: hidden;
+}
+
+/* Animated flowing gradient background */
+body::before {
+	content: '';
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	background: linear-gradient(
+		45deg,
+		var(--mango-golden),
+		var(--mango-yellow),
+		var(--mango-sky),
+		var(--mango-blue),
+		var(--mango-navy),
+		var(--mango-green),
+		var(--mango-coral)
+	);
+	background-size: 400% 400%;
+	animation: gradientFlow 15s ease infinite;
+}
+
+@keyframes gradientFlow {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 header,
@@ -11,28 +62,79 @@ main,
 footer {
 	max-width: 1000px;
 	margin: 0 auto;
-	padding: 16px;
+	padding: 20px;
+	background: rgba(255, 255, 255, 0.95);
+	backdrop-filter: blur(10px);
 }
 
 header {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 3px solid var(--mango-golden);
+	margin-bottom: 20px;
+	border-radius: 8px 8px 0 0;
+}
+
+header h1 {
+	color: var(--mango-navy);
+	margin: 0 0 15px 0;
+	font-size: 2.5em;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
-	margin-right: 12px;
+	margin-right: 20px;
 	text-decoration: none;
+	color: var(--mango-blue);
+	font-weight: 600;
+	padding: 8px 16px;
+	border-radius: 20px;
+	transition: all 0.3s ease;
+	display: inline-block;
 }
 
 nav a:hover {
-	text-decoration: underline;
+	background: var(--mango-golden);
+	color: white;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main {
+	background: rgba(255, 255, 255, 0.97);
+	border-radius: 8px;
+	margin-bottom: 20px;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+	color: var(--mango-navy);
+	border-left: 5px solid var(--mango-golden);
+	padding-left: 15px;
+	margin-top: 0;
+}
+
+main p {
+	color: var(--mango-dark-green);
+	font-size: 1.1em;
 }
 
 section {
-	padding: 12px 0;
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(219, 157, 0, 0.2);
+}
+
+section:last-child {
+	border-bottom: none;
 }
 
 footer {
-	border-top: 1px solid #ddd;
-	color: #666;
+	border-top: 3px solid var(--mango-golden);
+	color: var(--mango-navy);
+	text-align: center;
+	border-radius: 0 0 8px 8px;
+	background: rgba(255, 255, 255, 0.95);
+}
+
+footer small {
+	font-size: 0.9em;
 }
 
