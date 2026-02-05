@@ -1,0 +1,38 @@
+/* Very basic starter CSS */
+
+body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	line-height: 1.5;
+}
+
+header,
+main,
+footer {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 16px;
+}
+
+header {
+	border-bottom: 1px solid #ddd;
+}
+
+nav a {
+	margin-right: 12px;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration: underline;
+}
+
+section {
+	padding: 12px 0;
+}
+
+footer {
+	border-top: 1px solid #ddd;
+	color: #666;
+}
+
