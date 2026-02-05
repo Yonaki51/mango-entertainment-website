@@ -3,7 +3,6 @@
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
-	line-height: 1.5;
 }
 
 header,
@@ -15,20 +14,36 @@ footer {
 }
 
 header {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
 	border-bottom: 1px solid #ddd;
 }
 
+header h1 {
+	margin: 0;
+}
+
+header a {
+	color: inherit;
+	text-decoration: none;
+}
+
+nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 12px;
+}
+
 nav a {
-	margin-right: 12px;
 	text-decoration: none;
 }
 
 nav a:hover {
 	text-decoration: underline;
-}
-
-section {
-	padding: 12px 0;
 }
 
 footer {
