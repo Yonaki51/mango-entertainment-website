@@ -38,8 +38,10 @@ body::before {
 		var(--mango-sky),
 		var(--mango-blue),
 		var(--mango-navy),
+		var(--mango-dark-green),
 		var(--mango-green),
-		var(--mango-coral)
+		var(--mango-coral),
+		var(--mango-red)
 	);
 	background-size: 400% 400%;
 	animation: gradientFlow 15s ease infinite;
