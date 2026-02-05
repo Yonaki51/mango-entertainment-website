@@ -3,14 +3,22 @@
 body {
 	margin: 0;
 	font-family: Arial, sans-serif;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
 }
 
 header,
 main,
 footer {
+	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 16px;
+}
+
+main {
+	flex: 1;
 }
 
 header {
@@ -47,6 +55,7 @@ nav a:hover {
 }
 
 footer {
+	margin-top: auto;
 	border-top: 1px solid #ddd;
 	color: #666;
 }
