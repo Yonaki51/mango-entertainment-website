@@ -1,18 +1,5 @@
 /* Mango Entertainment Theme */
 
-/* Mango color palette */
-:root {
-	--mango-golden: #db9d00;
-	--mango-sky: #99d9ea;
-	--mango-blue: #2744c4;
-	--mango-navy: #142987;
-	--mango-dark-green: #3d5440;
-	--mango-green: #4a694e;
-	--mango-yellow: #faaf00;
-	--mango-red: #ff0000;
-	--mango-coral: #fa4343;
-}
-
 body {
 	margin: 0;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -33,15 +20,15 @@ body::before {
 	z-index: -1;
 	background: linear-gradient(
 		45deg,
-		var(--mango-golden),
-		var(--mango-yellow),
-		var(--mango-sky),
-		var(--mango-blue),
-		var(--mango-navy),
-		var(--mango-dark-green),
-		var(--mango-green),
-		var(--mango-coral),
-		var(--mango-red)
+		#db9d00,
+		#faaf00,
+		#99d9ea,
+		#2744c4,
+		#142987,
+		#3d5440,
+		#4a694e,
+		#fa4343,
+		#ff0000
 	);
 	background-size: 400% 400%;
 	animation: gradientFlow 15s ease infinite;
@@ -65,18 +52,18 @@ footer {
 	max-width: 1000px;
 	margin: 0 auto;
 	padding: 20px;
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(153, 217, 234, 0.85);
 	backdrop-filter: blur(10px);
 }
 
 header {
-	border-bottom: 3px solid var(--mango-golden);
+	border-bottom: 3px solid #db9d00;
 	margin-bottom: 20px;
 	border-radius: 8px 8px 0 0;
 }
 
 header h1 {
-	color: var(--mango-navy);
+	color: #142987;
 	margin: 0 0 15px 0;
 	font-size: 2.5em;
 	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -85,7 +72,7 @@ header h1 {
 nav a {
 	margin-right: 20px;
 	text-decoration: none;
-	color: var(--mango-blue);
+	color: #142987;
 	font-weight: 600;
 	padding: 8px 16px;
 	border-radius: 20px;
@@ -94,28 +81,28 @@ nav a {
 }
 
 nav a:hover {
-	background: var(--mango-golden);
-	color: white;
+	background: #db9d00;
+	color: #142987;
 	transform: translateY(-2px);
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 main {
-	background: rgba(255, 255, 255, 0.97);
+	background: rgba(153, 217, 234, 0.9);
 	border-radius: 8px;
 	margin-bottom: 20px;
 	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 main h2 {
-	color: var(--mango-navy);
-	border-left: 5px solid var(--mango-golden);
+	color: #142987;
+	border-left: 5px solid #db9d00;
 	padding-left: 15px;
 	margin-top: 0;
 }
 
 main p {
-	color: var(--mango-dark-green);
+	color: #3d5440;
 	font-size: 1.1em;
 }
 
@@ -129,11 +116,11 @@ section:last-child {
 }
 
 footer {
-	border-top: 3px solid var(--mango-golden);
-	color: var(--mango-navy);
+	border-top: 3px solid #db9d00;
+	color: #142987;
 	text-align: center;
 	border-radius: 0 0 8px 8px;
-	background: rgba(255, 255, 255, 0.95);
+	background: rgba(153, 217, 234, 0.85);
 }
 
 footer small {
