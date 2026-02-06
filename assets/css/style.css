@@ -36,14 +36,6 @@
 	font-style: normal;
 }
 
-/* Game Over - Gaming-style font for body text */
-@font-face {
-	font-family: game-over;
-	src: url(../fonts/game_over/game_over.ttf) format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 /* ============================================
    BASE STYLES
    ============================================ */
@@ -56,12 +48,14 @@
 /* Enable smooth scrolling for anchor links */
 html {
 	scroll-behavior: smooth;
+	font-size: 16px;  /* Standard base for readable system fonts */
 }
 
 /* Body: Full-height container with gradient background */
 body {
 	margin: 0;
-	font-family: game-over, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;  /* Using standard readable size for system fonts */
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -69,6 +63,19 @@ body {
 	background: linear-gradient(135deg, var(--bg-cream) 0%, var(--mango-light) 100%);
 	color: var(--text-dark);
 	line-height: 1.6;
+}
+
+/* Heading sizes */
+h1 {
+	font-size: 2.5rem;  /* 40px with 16px base */
+}
+
+h2 {
+	font-size: 2rem;    /* 32px with 16px base */
+}
+
+h3 {
+	font-size: 1.5rem;  /* 24px with 16px base */
 }
 
 /* ============================================
@@ -165,7 +172,7 @@ nav a {
 	border-radius: 8px;
 	transition: all 0.3s ease;
 	display: block;
-	font-family: game-over, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Hover effect: orange background with lift */
@@ -211,12 +218,13 @@ main h2::after {
 /* General paragraph styling */
 p {
 	color: var(--text-light);
-	font-family: game-over, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 1rem;
 }
 
 /* Larger paragraphs in main content area */
 main p {
-	font-size: 1.1rem;
+	font-size: 1.1rem;  /* ~18px with 16px base */
 	max-width: 800px;
 	margin-bottom: 40px;
 	line-height: 1.8;
@@ -311,7 +319,7 @@ footer {
 footer small {
 	font-size: 0.9rem;
 	opacity: 0.9;
-	font-family: game-over, sans-serif;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* ============================================
