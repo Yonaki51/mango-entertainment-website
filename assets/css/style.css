@@ -324,6 +324,13 @@ section p {
 /* Team section headings */
 #team h3 {
 	color: var(--mango-dark);
+	font-size: 2rem;
+	margin: 0 0 24px 0;
+	font-family: karmatic-arcade, sans-serif;
+}
+
+#team h4 {
+	color: var(--mango-dark);
 	font-size: 1.75rem;
 	margin: 32px 0 24px 0;
 	font-family: karmatic-arcade, sans-serif;
@@ -368,7 +375,7 @@ section p {
 }
 
 /* Team member names */
-.team-member h4 {
+.team-member h5 {
 	color: var(--text-dark);
 	font-size: 1.1rem;
 	margin: 12px 0 4px 0;
