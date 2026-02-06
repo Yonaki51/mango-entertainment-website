@@ -62,6 +62,7 @@ html {
 body {
 	margin: 0;
 	font-family: game-over, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -69,6 +70,23 @@ body {
 	background: linear-gradient(135deg, var(--bg-cream) 0%, var(--mango-light) 100%);
 	color: var(--text-dark);
 	line-height: 1.6;
+}
+
+/* Heading sizes */
+h1 {
+	font-size: 2.5rem;  /* 40px if base is 16px */
+}
+
+h2 {
+	font-size: 2rem;    /* 32px if base is 16px */
+}
+
+h3 {
+	font-size: 1.5rem;  /* 24px if base is 16px */
+}
+
+p {
+	font-size: 1rem;    /* 16px if base is 16px */
 }
 
 /* ============================================
