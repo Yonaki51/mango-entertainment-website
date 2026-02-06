@@ -78,3 +78,181 @@ window.addEventListener('scroll', setActiveNav);
 
 // Set initial active state on page load
 window.addEventListener('load', setActiveNav);
+
+/* ============================================
+   CONTACT FORM ENHANCEMENTS
+   Interactive form validation and submission
+   ============================================ */
+
+// Get the contact form
+const contactForm = document.querySelector('.contact-form');
+
+if (contactForm) {
+    const emailInput = contactForm.querySelector('#email');
+    const reasonSelect = contactForm.querySelector('#reason');
+    const messageTextarea = contactForm.querySelector('#message');
+    const submitBtn = contactForm.querySelector('.submit-btn');
+
+    /**
+     * Add character counter for message field
+     */
+    const charCounter = document.createElement('div');
+    charCounter.className = 'char-counter';
+    charCounter.textContent = '0 karakters';
+    messageTextarea.parentElement.appendChild(charCounter);
+
+    messageTextarea.addEventListener('input', function() {
+        const length = this.value.length;
+        charCounter.textContent = `${length} karakter${length === 1 ? '' : 's'}`;
+        
+        // Add a nice animation when typing
+        this.style.transform = 'scale(1.01)';
+        setTimeout(() => {
+            this.style.transform = 'scale(1)';
+        }, 100);
+    });
+
+    /**
+     * Add floating labels effect for better UX
+     */
+    const formInputs = [emailInput, messageTextarea];
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.parentElement.classList.add('focused');
+        });
+        
+        input.addEventListener('blur', function() {
+            if (!this.value) {
+                this.parentElement.classList.remove('focused');
+            }
+        });
+    });
+
+    /**
+     * Add validation with visual feedback
+     */
+    emailInput.addEventListener('blur', function() {
+        if (this.value && !this.validity.valid) {
+            this.classList.add('invalid');
+            showFieldError(this, 'Voer een geldig e-mailadres in');
+        } else {
+            this.classList.remove('invalid');
+            removeFieldError(this);
+        }
+    });
+
+    emailInput.addEventListener('input', function() {
+        if (this.classList.contains('invalid')) {
+            this.classList.remove('invalid');
+            removeFieldError(this);
+        }
+    });
+
+    /**
+     * Form submission handler with animation
+     */
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Disable submit button to prevent double submission
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Versturen...';
+        
+        // Add loading animation
+        submitBtn.classList.add('loading');
+        
+        // Simulate form submission (since there's no backend)
+        setTimeout(() => {
+            // Show success message
+            showSuccessMessage();
+            
+            // Reset form
+            contactForm.reset();
+            charCounter.textContent = '0 karakters';
+            
+            // Reset button
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Verstuur';
+            submitBtn.classList.remove('loading');
+            
+            // Remove focused states
+            formInputs.forEach(input => {
+                input.parentElement.classList.remove('focused');
+            });
+        }, 1500);
+    });
+
+    /**
+     * Show error message for a field
+     */
+    function showFieldError(field, message) {
+        removeFieldError(field);
+        const errorMsg = document.createElement('div');
+        errorMsg.className = 'field-error';
+        errorMsg.textContent = message;
+        field.parentElement.appendChild(errorMsg);
+    }
+
+    /**
+     * Remove error message from a field
+     */
+    function removeFieldError(field) {
+        const existingError = field.parentElement.querySelector('.field-error');
+        if (existingError) {
+            existingError.remove();
+        }
+    }
+
+    /**
+     * Show success message after form submission
+     */
+    function showSuccessMessage() {
+        const successMsg = document.createElement('div');
+        successMsg.className = 'success-message';
+        successMsg.innerHTML = `
+            <div class="success-content">
+                <div class="success-icon">✓</div>
+                <h3>Bedankt voor je bericht!</h3>
+                <p>We nemen zo snel mogelijk contact met je op.</p>
+            </div>
+        `;
+        
+        contactForm.parentElement.insertBefore(successMsg, contactForm);
+        
+        // Animate in
+        setTimeout(() => {
+            successMsg.classList.add('show');
+        }, 10);
+        
+        // Remove after 5 seconds
+        setTimeout(() => {
+            successMsg.classList.remove('show');
+            setTimeout(() => {
+                successMsg.remove();
+            }, 300);
+        }, 5000);
+    }
+
+    /**
+     * Add hover effect to submit button with ripple
+     */
+    submitBtn.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        ripple.className = 'ripple';
+        
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.width = ripple.style.height = size + 'px';
+        ripple.style.left = x + 'px';
+        ripple.style.top = y + 'px';
+        
+        this.appendChild(ripple);
+        
+        setTimeout(() => {
+            ripple.remove();
+        }, 600);
+    });
+}
