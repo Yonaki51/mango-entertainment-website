@@ -37,7 +37,7 @@ html {
 
 body {
 	margin: 0;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: game-over, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -79,6 +79,7 @@ header {
 header h1 {
 	margin: 0;
 	color: var(--mango-dark);
+	font-family: karmatic-arcade, sans-serif;
 }
 
 header a {
@@ -118,6 +119,7 @@ nav a {
 	border-radius: 8px;
 	transition: all 0.3s ease;
 	display: block;
+	font-family: game-over, sans-serif;
 }
 
 nav a:hover {
@@ -138,6 +140,7 @@ main h2 {
 	margin-bottom: 16px;
 	position: relative;
 	display: inline-block;
+	font-family: karmatic-arcade, sans-serif;
 }
 
 main h2::after {
@@ -151,40 +154,59 @@ main h2::after {
 	border-radius: 2px;
 }
 
-main p {
-	font-family: karmatic-arcade;
-	font-size: 1.2rem;
+p {
 	color: var(--text-light);
+	font-family: game-over, sans-serif;
+}
+
+main p {
+	font-size: 1.1rem;
 	max-width: 800px;
 	margin-bottom: 40px;
 	line-height: 1.8;
 }
 
 section {
-	background: white;
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 244, 230, 0.7) 100%);
+	backdrop-filter: blur(10px);
 	padding: 32px;
 	margin: 32px 0;
-	border-radius: 16px;
+	border-radius: 20px;
 	box-shadow: 0 8px 24px var(--shadow);
-	border-left: 6px solid var(--mango-primary);
+	border: solid var(--mango-primary);
+	border-width: 3px 3px 3px 8px;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	position: relative;
+	overflow: hidden;
+	max-width: 600px;
+}
+
+section:nth-child(odd) {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+section:nth-child(even) {
+	margin-left: auto;
+	margin-right: 0;
 }
 
 section:hover {
 	transform: translateY(-4px);
 	box-shadow: 0 12px 32px var(--shadow);
+	border-color: var(--mango-dark);
 }
 
 section h2 {
 	margin-top: 0;
 	font-size: 2rem;
+	font-family: karmatic-arcade, sans-serif;
 }
 
 
 
 section p {
-	color: var(--text-light);
-	font-size: 1.1rem;
+	font-size: 1rem;
 }
 
 #blog-left img {
@@ -208,6 +230,7 @@ footer {
 footer small {
 	font-size: 0.9rem;
 	opacity: 0.9;
+	font-family: game-over, sans-serif;
 }
 
 /* Responsive Design */
@@ -230,6 +253,12 @@ footer small {
 	section {
 		padding: 24px;
 		margin: 24px 0;
+	}
+
+	section:nth-child(odd),
+	section:nth-child(even) {
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 
