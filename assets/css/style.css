@@ -31,7 +31,7 @@
 /* Karmatic Arcade - Retro arcade-style font for headings */
 @font-face {
 	font-family: Karmatic-arcade;
-	src: url(/assets/fonts/karmatic_arcade/ka1.ttf);
+	src: url(../fonts/karmatic_arcade/ka1.ttf);
 	font-weight: normal;
 	font-style: normal;
 }
@@ -39,7 +39,7 @@
 /* Game Over - Gaming-style font for body text */
 @font-face {
 	font-family: game-over;
-	src: url(/assets/fonts/game_over/game_over.ttf);
+	src: url(../fonts/game_over/game_over.ttf);
 	font-weight: normal;
 	font-style: normal;
 }
