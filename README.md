@@ -48,7 +48,9 @@ mango-entertainment-website/
 
 2. Open `index.html` in een webbrowser:
    - Dubbelklik op het bestand, of
-   - Gebruik een lokale server (aanbevolen voor volledige functionaliteit)
+   - Gebruik een lokale server (zie hieronder voor beste ervaring)
+
+> **Note:** De website gebruikt een `<base>` tag voor GitHub Pages deployment. Voor lokale ontwikkeling, gebruik een van de hieronder genoemde server opties die de repository naam in de URL simuleren, of open het bestand direct in de browser (werkt ook, maar zonder de base path).
 
 ### Met Lokale Server
 
@@ -66,6 +68,13 @@ php -S localhost:8000
 ```
 
 Navigeer dan naar `http://localhost:8000` in je browser.
+
+### GitHub Pages Deployment
+
+De website is geconfigureerd voor deployment op GitHub Pages:
+- **URL**: `https://yonaki51.github.io/mango-entertainment-website/`
+- **Configuratie**: De `<base>` tag in `index.html` zorgt ervoor dat alle assets correct laden op GitHub Pages
+- **Setup**: Ga naar repository Settings → Pages → selecteer de branch om te deployen
 
 ## 🎯 Secties
 
