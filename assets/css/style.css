@@ -178,6 +178,17 @@ section {
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	position: relative;
 	overflow: hidden;
+	max-width: 600px;
+}
+
+section:nth-child(odd) {
+	margin-left: 0;
+	margin-right: auto;
+}
+
+section:nth-child(even) {
+	margin-left: auto;
+	margin-right: 0;
 }
 
 section:hover {
