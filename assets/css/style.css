@@ -281,9 +281,8 @@ section p {
 /* Blog post layout with image and text side-by-side */
 #blog-left {
 	display: flex;
-	gap: 24px;
+	gap: 40px;
 	align-items: flex-start;
-	flex-wrap: wrap;
 }
 
 /* Blog images styling */
