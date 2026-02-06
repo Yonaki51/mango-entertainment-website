@@ -180,9 +180,19 @@ section h2 {
 	font-size: 2rem;
 }
 
+
+
 section p {
 	color: var(--text-light);
 	font-size: 1.1rem;
+}
+
+#blog-left img {
+	max-width: 100%;
+	height: 250px;
+	display: block;
+	margin-bottom: 16px;
+	border-radius: 8px;
 }
 
 footer {
