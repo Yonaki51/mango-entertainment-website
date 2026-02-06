@@ -31,7 +31,7 @@
 /* Karmatic Arcade - Retro arcade-style font for headings */
 @font-face {
 	font-family: Karmatic-arcade;
-	src: url(/assets/fonts/karmatic_arcade/ka1.ttf);
+	src: url(assets/fonts/karmatic_arcade/ka1.ttf);
 	font-weight: normal;
 	font-style: normal;
 }
@@ -39,7 +39,7 @@
 /* Game Over - Gaming-style font for body text */
 @font-face {
 	font-family: game-over;
-	src: url(/assets/fonts/game_over/game_over.ttf);
+	src: url(assets/fonts/game_over/game_over.ttf);
 	font-weight: normal;
 	font-style: normal;
 }
@@ -278,12 +278,19 @@ section p {
    BLOG SECTION SPECIFIC STYLES
    ============================================ */
 
+/* Blog post layout with image and text side-by-side */
+#blog-left {
+	display: flex;
+	gap: 24px;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
 /* Blog images styling */
 #blog-left img {
-	max-width: 100%;
-	height: 250px;
-	display: block;
-	margin-bottom: 16px;
+	max-width: 300px;
+	height: auto;
+	flex-shrink: 0;
 	border-radius: 8px;
 }
 
