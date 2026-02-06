@@ -5,16 +5,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+    <!-- Page Title and Description -->
     <title>Mango Entertainment</title>
     <meta name="description" content="Mango Entertainment website" />
 
+    <!-- Stylesheets and Scripts -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="assets/js/script.js" defer></script>
 </head>
 
 <body>
+    <!-- ============================================
+         HEADER - Logo and Navigation
+         ============================================ -->
     <header>
+        <!-- Logo Link -->
         <a href="#home"><img src="/assets/img/mango_entertainment_logo.png" alt="mango logo"></a>
+        
+        <!-- Main Navigation -->
         <nav>
             <ul>
                 <li><a href="#blog">Blog</a></li>
@@ -25,13 +33,20 @@
         </nav>
     </header>
 
+    <!-- ============================================
+         MAIN CONTENT
+         ============================================ -->
     <main id="home">
+        <!-- Welcome Section -->
         <h2>Welkom bij Mango Entertainment! 🥭</h2>
         <p>Een verse gamestudio, druk bezig met onze eerste creaties. We experimenteren, leren en bouwen — en delen graag de reis. Kijk gerust rond!</p>
 
+        <!-- Blog Section -->
         <section id="blog">
             <h2>Blog</h2>
             <p>Blijf op de hoogte van onze laatste ontwikkelingen, updates en behind-the-scenes inzichten in onze game development proces.</p>
+            
+            <!-- Blog Post: Obscura Game Announcement -->
             <section id="blog-left">
                 <img src="/assets/img/obscura_logo.png" alt="obscura logo">
                 <h3>exciting things!</h3>
@@ -39,23 +54,30 @@
             </section>
         </section>
 
+        <!-- Games Section -->
         <section id="games">
             <h2>Games</h2>
             <p>Ontdek de games waar we aan werken! Van innovatieve concepten tot speelbare prototypes - hier vind je al onze projecten.</p>
         </section>
 
+        <!-- About Section -->
         <section id="about">
             <h2>Over Ons</h2>
             <p>Mango Entertainment is een indie gamestudio die passie en creativiteit samenbrengt. We geloven in het maken van unieke gaming ervaringen die spelers inspireren en vermaken.</p>
         </section>
 
+        <!-- Contact Section -->
         <section id="contact">
             <h2>Contact</h2>
             <p>Wil je in contact komen? We horen graag van je! Neem gerust contact met ons op voor samenwerkingen, vragen of gewoon om hallo te zeggen.</p>
         </section>
     </main>
 
+    <!-- ============================================
+         FOOTER - Copyright Notice
+         ============================================ -->
     <footer>
+        <!-- Copyright with dynamic year (updated by script.js) -->
         <small>&copy; <span id="year"></span> Mango Entertainment</small>
     </footer>
 </body>
