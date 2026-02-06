@@ -317,6 +317,86 @@ section p {
 
 
 /* ============================================
+   TEAM SECTION STYLES
+   ============================================ */
+
+/* Team section container */
+#team {
+	max-width: 100%;
+	margin: 40px 0;
+}
+
+/* Team section headings */
+#team h3 {
+	color: var(--mango-dark);
+	font-size: 2rem;
+	margin: 0 0 24px 0;
+	font-family: karmatic-arcade, sans-serif;
+}
+
+#team h4 {
+	color: var(--mango-dark);
+	font-size: 1.75rem;
+	margin: 32px 0 24px 0;
+	font-family: karmatic-arcade, sans-serif;
+}
+
+/* Team members grid layout */
+.team-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	gap: 24px;
+	margin-bottom: 32px;
+}
+
+/* Individual team member card */
+.team-member {
+	background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 244, 230, 0.8) 100%);
+	backdrop-filter: blur(8px);
+	padding: 24px;
+	border-radius: 16px;
+	text-align: center;
+	box-shadow: 0 4px 12px var(--shadow);
+	border: 2px solid var(--mango-primary);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for team member cards */
+.team-member:hover {
+	transform: translateY(-8px);
+	box-shadow: 0 8px 20px var(--shadow);
+	border-color: var(--mango-dark);
+}
+
+/* Team member images */
+.team-member img {
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	object-fit: cover;
+	border: 4px solid var(--mango-primary);
+	margin-bottom: 16px;
+	box-shadow: 0 4px 8px var(--shadow);
+}
+
+/* Team member names */
+.team-member h5 {
+	color: var(--text-dark);
+	font-size: 1.1rem;
+	margin: 12px 0 4px 0;
+	font-weight: 600;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Team member role */
+.team-member .role {
+	color: var(--text-light);
+	font-size: 0.9rem;
+	margin: 0;
+	font-style: italic;
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 
@@ -392,5 +472,10 @@ footer small {
 	/* Further reduce heading size */
 	main h2 {
 		font-size: 1.75rem;
+	}
+
+	/* Stack team members in single column on mobile */
+	.team-grid {
+		grid-template-columns: 1fr;
 	}
 }
