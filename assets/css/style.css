@@ -298,6 +298,16 @@ section p {
 	max-width: 300px;
 	height: auto;
 	flex-shrink: 0;
+}
+
+/* Blog post date styling */
+.blog-date {
+	font-size: 0.85rem;
+	color: var(--text-light);
+	margin: -8px 0 12px 0;
+	font-style: italic;
+	opacity: 0.8;
+}
 	border-radius: 8px;
 }
 
