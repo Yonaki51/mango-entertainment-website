@@ -103,7 +103,7 @@ if (contactForm) {
 
     messageTextarea.addEventListener('input', function() {
         const length = this.value.length;
-        charCounter.textContent = `${length} karakter${length !== 1 ? 's' : ''}`;
+        charCounter.textContent = `${length} karakter${length === 1 ? '' : 's'}`;
         
         // Add a nice animation when typing
         this.style.transform = 'scale(1.01)';
