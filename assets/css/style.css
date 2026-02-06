@@ -154,10 +154,13 @@ main h2::after {
 	border-radius: 2px;
 }
 
-main p {
-	font-family: game-over, sans-serif;
-	font-size: 1.1rem;
+p {
 	color: var(--text-light);
+	font-family: game-over, sans-serif;
+}
+
+main p {
+	font-size: 1.1rem;
 	max-width: 800px;
 	margin-bottom: 40px;
 	line-height: 1.8;
@@ -170,8 +173,8 @@ section {
 	margin: 32px 0;
 	border-radius: 20px;
 	box-shadow: 0 8px 24px var(--shadow);
-	border: 3px solid var(--mango-primary);
-	border-left: 8px solid var(--mango-primary);
+	border: solid var(--mango-primary);
+	border-width: 3px 3px 3px 8px;
 	transition: transform 0.3s ease, box-shadow 0.3s ease;
 	position: relative;
 	overflow: hidden;
@@ -190,9 +193,7 @@ section h2 {
 }
 
 section p {
-	color: var(--text-light);
 	font-size: 1rem;
-	font-family: game-over, sans-serif;
 }
 
 footer {
