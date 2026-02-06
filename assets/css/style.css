@@ -13,6 +13,20 @@
 	--shadow: rgba(230, 115, 0, 0.15);
 }
 
+@font-face {
+	font-family: Karmatic-arcade;
+	src: url(/assets/fonts/karmatic_arcade/ka1.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: game-over;
+	src: url(/assets/fonts/game_over/game_over.ttf);
+	font-weight: normal;
+	font-style: normal;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -137,7 +151,8 @@ main h2::after {
 	border-radius: 2px;
 }
 
-main > p {
+main p {
+	font-family: karmatic-arcade;
 	font-size: 1.2rem;
 	color: var(--text-light);
 	max-width: 800px;
@@ -192,16 +207,16 @@ footer small {
 		gap: 16px;
 		padding: 16px;
 	}
-	
+
 	nav ul {
 		flex-wrap: wrap;
 		justify-content: center;
 	}
-	
+
 	main h2 {
 		font-size: 2rem;
 	}
-	
+
 	section {
 		padding: 24px;
 		margin: 24px 0;
@@ -214,13 +229,12 @@ footer small {
 		gap: 8px;
 		width: 100%;
 	}
-	
+
 	nav a {
 		text-align: center;
 	}
-	
+
 	main h2 {
 		font-size: 1.75rem;
 	}
 }
-
