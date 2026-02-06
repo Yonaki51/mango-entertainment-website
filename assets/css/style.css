@@ -85,10 +85,6 @@ h3 {
 	font-size: 1.5rem;  /* 24px if base is 16px */
 }
 
-p {
-	font-size: 1rem;    /* 16px if base is 16px */
-}
-
 /* ============================================
    LAYOUT CONTAINERS
    ============================================ */
@@ -230,6 +226,7 @@ main h2::after {
 p {
 	color: var(--text-light);
 	font-family: game-over, sans-serif;
+	font-size: 1rem;    /* 16px if base is 16px */
 }
 
 /* Larger paragraphs in main content area */
