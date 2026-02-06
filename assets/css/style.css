@@ -231,7 +231,7 @@ p {
 
 /* Larger paragraphs in main content area */
 main p {
-	font-size: 1.2rem;
+	font-size: 1.2rem;  /* 24px if base is 20px */
 	max-width: 800px;
 	margin-bottom: 40px;
 	line-height: 1.8;
