@@ -76,6 +76,8 @@ De website is geconfigureerd voor deployment op GitHub Pages:
 - **Configuratie**: De `<base>` tag in `index.html` zorgt ervoor dat alle assets correct laden op GitHub Pages
 - **Setup**: Ga naar repository Settings → Pages → selecteer de branch om te deployen
 
+> **Note voor forks**: Als je deze repository forkt of de naam verandert, update dan de `<base href="/mango-entertainment-website/">` tag in `index.html` naar je nieuwe repository naam.
+
 ## 🎯 Secties
 
 - **Home**: Welkomstbericht en introductie
