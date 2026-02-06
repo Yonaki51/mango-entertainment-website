@@ -298,6 +298,11 @@ section p {
 	max-width: 300px;
 	height: auto;
 	flex-shrink: 0;
+	border: 3px solid var(--mango-primary);
+	border-radius: 12px;
+	padding: 12px;
+	background: white;
+	box-shadow: 0 4px 12px var(--shadow);
 }
 
 /* Blog post date styling */
