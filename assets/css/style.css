@@ -56,13 +56,14 @@
 /* Enable smooth scrolling for anchor links */
 html {
 	scroll-behavior: smooth;
+	font-size: 32px;  /* Base font size for rem calculations */
 }
 
 /* Body: Full-height container with gradient background */
 body {
 	margin: 0;
 	font-family: game-over, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 32px;
+	font-size: 32px;  /* Inherits from html, but set explicitly for clarity */
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
