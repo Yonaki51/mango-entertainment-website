@@ -36,14 +36,6 @@
 	font-style: normal;
 }
 
-/* Game Over - Gaming-style font for body text */
-@font-face {
-	font-family: game-over;
-	src: url(../fonts/game_over/game_over.ttf) format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
 /* ============================================
    BASE STYLES
    ============================================ */
