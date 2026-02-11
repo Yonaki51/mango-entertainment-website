@@ -256,3 +256,73 @@ if (contactForm) {
         }, 600);
     });
 }
+
+/* ============================================
+   IMAGE SLIDER FUNCTIONALITY
+   Enables navigation through multiple product images
+   ============================================ */
+
+// Get all image sliders on the page
+const imageSliders = document.querySelectorAll('.image-slider');
+
+imageSliders.forEach(slider => {
+    const images = slider.querySelectorAll('.slider-image');
+    const prevBtn = slider.querySelector('.slider-btn.prev');
+    const nextBtn = slider.querySelector('.slider-btn.next');
+    const dots = slider.querySelectorAll('.slider-dots .dot');
+    let currentIndex = 0;
+
+    /**
+     * Show image at specified index
+     */
+    function showImage(index) {
+        // Remove active class from all images and dots
+        images.forEach(img => img.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+
+        // Add active class to current image and dot
+        images[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentIndex = index;
+    }
+
+    /**
+     * Show next image in the slider
+     */
+    function nextImage() {
+        const newIndex = (currentIndex + 1) % images.length;
+        showImage(newIndex);
+    }
+
+    /**
+     * Show previous image in the slider
+     */
+    function prevImage() {
+        const newIndex = (currentIndex - 1 + images.length) % images.length;
+        showImage(newIndex);
+    }
+
+    // Add event listeners to navigation buttons
+    if (prevBtn) {
+        prevBtn.addEventListener('click', prevImage);
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', nextImage);
+    }
+
+    // Add event listeners to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            showImage(index);
+        });
+    });
+
+    // Optional: Auto-advance slider every 5 seconds (can be removed if not desired)
+    // Uncomment the following lines to enable auto-advance
+    /*
+    setInterval(() => {
+        nextImage();
+    }, 5000);
+    */
+});

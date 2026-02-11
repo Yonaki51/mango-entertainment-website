@@ -735,6 +735,123 @@ footer small {
    RESPONSIVE DESIGN
    ============================================ */
 
+/* ============================================
+   IMAGE SLIDER STYLES
+   ============================================ */
+
+/* Image slider container */
+.image-slider {
+	position: relative;
+	max-width: 300px;
+	border: 3px solid var(--mango-primary);
+	border-radius: 12px;
+	padding: 12px;
+	background: white;
+	box-shadow: 0 4px 12px var(--shadow);
+	overflow: hidden;
+}
+
+/* Slider images */
+.image-slider .slider-image {
+	width: 100%;
+	height: auto;
+	display: none;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	box-shadow: none;
+	max-width: none;
+}
+
+/* Active image is visible */
+.image-slider .slider-image.active {
+	display: block;
+}
+
+/* Slider navigation buttons */
+.slider-btn {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 153, 51, 0.8);
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	box-shadow: 0 2px 8px var(--shadow);
+	line-height: 1;
+	padding: 0;
+}
+
+/* Previous button positioning */
+.slider-btn.prev {
+	left: 8px;
+}
+
+/* Next button positioning */
+.slider-btn.next {
+	right: 8px;
+}
+
+/* Button hover effect */
+.slider-btn:hover {
+	background: var(--mango-primary);
+	transform: translateY(-50%) scale(1.1);
+	box-shadow: 0 4px 12px var(--shadow);
+}
+
+/* Button active state */
+.slider-btn:active {
+	transform: translateY(-50%) scale(0.95);
+}
+
+/* Slider dots indicator */
+.slider-dots {
+	position: absolute;
+	bottom: 8px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 8px;
+	z-index: 10;
+}
+
+/* Individual dot */
+.slider-dots .dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.6);
+	border: 2px solid var(--mango-primary);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+
+/* Active dot */
+.slider-dots .dot.active {
+	background: var(--mango-primary);
+	transform: scale(1.2);
+}
+
+/* Dot hover effect */
+.slider-dots .dot:hover {
+	background: var(--mango-secondary);
+	transform: scale(1.15);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
 /* Tablet and smaller screens */
 @media (max-width: 768px) {
 	/* Stack header elements vertically */
