@@ -764,6 +764,17 @@ footer small {
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	/* Stack blog post content vertically on tablet */
+	.blog-post {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	/* Make blog images full width on tablet */
+	.blog-post img {
+		max-width: 100%;
+	}
 }
 
 /* Mobile phones */
