@@ -288,14 +288,14 @@ section p {
    ============================================ */
 
 /* Blog post layout with image and text side-by-side */
-#blog-left {
+.blog-post {
 	display: flex;
 	gap: 40px;
 	align-items: flex-start;
 }
 
 /* Blog images styling */
-#blog-left img {
+.blog-post img {
 	max-width: 300px;
 	height: auto;
 	flex-shrink: 0;
