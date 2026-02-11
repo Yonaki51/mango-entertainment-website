@@ -275,6 +275,7 @@ section h2 {
 	margin-top: 0;
 	font-size: 2rem;
 	font-family: karmatic-arcade, sans-serif;
+	display: block;
 }
 
 /* Section paragraphs */
