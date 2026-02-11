@@ -742,7 +742,7 @@ footer small {
 /* Image slider container */
 .image-slider {
 	position: relative;
-	max-width: 300px;
+	width: 300px;
 	flex-shrink: 0;
 	border: 3px solid var(--mango-primary);
 	border-radius: 12px;
@@ -895,6 +895,12 @@ footer small {
 	/* Make blog images full width on tablet */
 	.blog-post img {
 		max-width: 100%;
+	}
+	
+	/* Make image sliders responsive on tablet */
+	.image-slider {
+		width: 100%;
+		max-width: 300px;
 	}
 }
 
