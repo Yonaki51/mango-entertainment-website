@@ -318,7 +318,8 @@ section p {
 
 /* Game button styling */
 .game-button {
-	display: inline-block;
+	display: block;
+	width: 100%;
 	margin-top: 16px;
 	padding: 14px 28px;
 	background: linear-gradient(135deg, var(--mango-primary), var(--mango-dark));
@@ -332,6 +333,7 @@ section p {
 	position: relative;
 	overflow: hidden;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
 }
 
 /* Shine effect overlay */
